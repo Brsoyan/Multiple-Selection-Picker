@@ -9,10 +9,10 @@ When should show picker call `config` function and pass parent View Controller, 
 
 Create PickerEventsDelegate listener if we need to listen show and close actions.
 `
-protocol PickerEventsDelegate: class { <br />
-    func pickerWillShow(height: CGFloat) <br />
-    func pickerDidHide(height: CGFloat) <br />
-} <br />
+protocol PickerEventsDelegate: class { \
+    func pickerWillShow(height: CGFloat) \
+    func pickerDidHide(height: CGFloat) \
+} \
 ` 
 
 ![](https://github.com/Brsoyan/Multiple-Selection-Picker/blob/master/Info/gif2.gif)
@@ -20,8 +20,8 @@ In MultipleSelectionPickerViewHandler picker view is a custom view, you can over
 
 Confirm to protocol MultiplePickerEventsDelegate and handle events. <br />
 `
-protocol MultiplePickerEventsDelegate: class { <br />
-    func pickerDidHide(text: String, owner: UIView?) <br />
-    func warningTextIsEmpty(owner: UIView?) <br />
-} <br />
+protocol MultiplePickerEventsDelegate: class { \
+    func pickerDidHide(text: String, owner: UIView?) \
+    func warningTextIsEmpty(owner: UIView?) \
+} \
 `
