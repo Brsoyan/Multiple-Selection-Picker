@@ -43,7 +43,6 @@ class DatePickerViewHandler: PickerViewHandler {
     private func getMonths() -> [String] {
         var months = [String]()
         let dateFormatter = DateFormatter()
-        dateFormatter.locale = Locale(identifier: FreighthaulUserDefaults().currentLocalizationKey)
         for month in 0...11 {
             months.append(dateFormatter.monthSymbols[month])
         }
@@ -77,15 +76,6 @@ class DatePickerViewHandler: PickerViewHandler {
         
         guard let reusingLabel = view as? UILabel else {
             let label = UILabel.init()
-            if LanguagesProvider().currentLanguageId() == LanguageId.armenian {
-                let attributes: [NSAttributedStringKey: Any] = [
-                    .font: UIFont(name: "Roboto-Regular", size: 13)!
-                ]
-                
-                label.attributedText = NSAttributedString(string: title, attributes: attributes)
-                label.sizeToFit()
-                return label
-            }
             label.attributedText = NSAttributedString(string: title)
             label.textAlignment = .center
             return label
@@ -94,7 +84,6 @@ class DatePickerViewHandler: PickerViewHandler {
         reusingLabel.attributedText = NSAttributedString(string: title)
         
         return reusingLabel
-
     }
     
     override func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {

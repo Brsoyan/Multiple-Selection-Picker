@@ -6,7 +6,7 @@
 //  Copyright © 2018 Hayk Brsoyan. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol MultiplePickerEventsDelegate: class {
     func pickerDidHide(text: String, owner: UIView?)
@@ -16,18 +16,18 @@ protocol MultiplePickerEventsDelegate: class {
 class MultipleSelectionPickerViewHandler: PickerViewHandler {
     private struct MultipleSelectionConstants {
         static let rowHeight: CGFloat = 44
-        static let usStateCount = 50
     }
-    
-    override var selectedRow: Int? {
-        willSet {
-            print("")
-        }
-    }
-    
+        
     weak var owner: UIView?
     weak var multiSelectionDelegate: MultiplePickerEventsDelegate?
     private var selectedRows: Set<Int> = Set(0..<USState.short().count)
+    private var usStateCount = 0
+    
+    override var data: [String] {
+        didSet {
+            usStateCount = data.count
+        }
+    }
     
     override init(data: [String]) {
         super.init(data: data)
@@ -36,13 +36,12 @@ class MultipleSelectionPickerViewHandler: PickerViewHandler {
         tap.delegate = self
     }
     
-    func configWith(parentVC: UIViewController, owner: UIView?, onSelectedTitle: ((_ text : String) -> Void)?) {
+    func configWith(parentVC: UIViewController, owner: UIView?, data: [String], onSelectedTitle: ((_ text : String) -> Void)?) {
+        configWith(parentVC: parentVC, data: data, onSelectedTitle: onSelectedTitle)
         self.owner = owner
-        configWith(parentVC: parentVC, onSelectedTitle: onSelectedTitle)
     }
     
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
-        
         guard let reusingView = view as? SelectionView else {
             let view = SelectionView.init(frame: CGRect(x: 0, y: 0, width: pickerView.bounds.width * 0.8, height: MultipleSelectionConstants.rowHeight))
             setData(view: view, row: row)
@@ -67,7 +66,7 @@ class MultipleSelectionPickerViewHandler: PickerViewHandler {
         let toolBar = UIToolbar()
         toolBar.barStyle = .default
         toolBar.isTranslucent = true
-        toolBar.tintColor = UIColor.blueMagenta()
+        toolBar.tintColor = UIColor.blue
         toolBar.sizeToFit()
         
         let closeButton = UIBarButtonItem(title: "Close", style: .plain, target: self, action: #selector(dismiss))
@@ -96,7 +95,7 @@ class MultipleSelectionPickerViewHandler: PickerViewHandler {
         let selected = selectedView.select()
         if selected == true {
             selectedRows.insert(row)
-            if selectedRows.count == MultipleSelectionConstants.usStateCount {
+            if selectedRows.count + 1 == usStateCount {
                 selectedRows.insert(0)
             }
         } else {

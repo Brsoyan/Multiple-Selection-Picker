@@ -6,10 +6,7 @@
 //  Copyright © 2018 Hayk Brsoyan. All rights reserved.
 //
 
-protocol PickerEventsDelegate: class {
-    func pickerWillShow(height: CGFloat)
-    func pickerDidHide(height: CGFloat)
-}
+import UIKit
 
 class PickerViewHandler: NSObject, UIPickerViewDelegate, UIPickerViewDataSource {
     
@@ -40,9 +37,11 @@ class PickerViewHandler: NSObject, UIPickerViewDelegate, UIPickerViewDataSource 
         presentPicker(parentVC: parentVC, onSelectedTitle: onSelectedTitle)
     }
     
-    func configWith(parentVC: UIViewController, data: [String], onSelectedTitle: ((_ text : String) -> Void)?) {
-        self.data = data
+    func configWith(parentVC: UIViewController, data: [String]?, onSelectedTitle: ((_ text : String) -> Void)?) {
         presentPicker(parentVC: parentVC, onSelectedTitle: onSelectedTitle)
+        if let data = data {
+            self.data = data
+        }
     }
     
     internal func presentPicker(parentVC: UIViewController, onSelectedTitle: ((_ text : String) -> Void)?) {
@@ -70,7 +69,7 @@ class PickerViewHandler: NSObject, UIPickerViewDelegate, UIPickerViewDataSource 
         let toolBar = UIToolbar()
         toolBar.barStyle = .default
         toolBar.isTranslucent = true
-        toolBar.tintColor = UIColor.blueMagenta()
+        toolBar.tintColor = UIColor.blue
         toolBar.sizeToFit()
         
         let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(dismiss))
@@ -135,15 +134,6 @@ class PickerViewHandler: NSObject, UIPickerViewDelegate, UIPickerViewDataSource 
 
 
 
-class PickerView: UIPickerView {
-    
-    var pickerDidHide: (() -> Void)?
-    
-    override func removeFromSuperview() {
-        super.removeFromSuperview()
-        self.pickerDidHide?()
-    }
-}
 
 
 
