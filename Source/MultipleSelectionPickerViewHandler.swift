@@ -36,7 +36,7 @@ class MultipleSelectionPickerViewHandler: PickerViewHandler {
         tap.delegate = self
     }
     
-    func configWith(parentVC: UIViewController, owner: UIView?, data: [String], onSelectedTitle: ((_ text : String) -> Void)?) {
+    func configWith(parentVC: UIViewController, owner: UIView?, data: [String]?, onSelectedTitle: ((_ text : String) -> Void)?) {
         configWith(parentVC: parentVC, data: data, onSelectedTitle: onSelectedTitle)
         self.owner = owner
     }
