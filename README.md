@@ -3,25 +3,25 @@
 PickerViewHandler,DatePickerViewHandler and MultipleSelectionPickerViewHandler easy to use.
 Create picker handeler `private var pickerHandler = PickerViewHandler(data: [])`
 
-![](https://github.com/Brsoyan/Multiple-Selection-Picker/blob/master/Info/gif1.gif)
+![](https://github.com/Brsoyan/Multiple-Selection-Picker/blob/master/Info/git1.gif)
 
 When should show picker call `config` function and pass parent View Controller, data if you don't pass in initializer and onSelectedTitle closure if we need to update our view dynamically.
 
 Create PickerEventsDelegate listener if we need to listen show and close actions.
 `
-protocol PickerEventsDelegate: class {
-    func pickerWillShow(height: CGFloat)
-    func pickerDidHide(height: CGFloat)
-}
+protocol PickerEventsDelegate: class { <br />
+    func pickerWillShow(height: CGFloat) <br />
+    func pickerDidHide(height: CGFloat) <br />
+} <br />
 ` 
 
 ![](https://github.com/Brsoyan/Multiple-Selection-Picker/blob/master/Info/gif2.gif)
 In MultipleSelectionPickerViewHandler picker view is a custom view, you can override `SelectionView`
 
-Confirm to protocol MultiplePickerEventsDelegate and handle events.
+Confirm to protocol MultiplePickerEventsDelegate and handle events. <br />
 `
-protocol MultiplePickerEventsDelegate: class {
-    func pickerDidHide(text: String, owner: UIView?)
-    func warningTextIsEmpty(owner: UIView?)
-}
+protocol MultiplePickerEventsDelegate: class { <br />
+    func pickerDidHide(text: String, owner: UIView?) <br />
+    func warningTextIsEmpty(owner: UIView?) <br />
+} <br />
 `
