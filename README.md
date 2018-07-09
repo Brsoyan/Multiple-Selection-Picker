@@ -1,6 +1,6 @@
 # Multiple-Selection-Picker
 
-![](https://github.com/Brsoyan/Multiple-Selection-Picker/blob/master/Info/git0.gif)
+![](https://github.com/Brsoyan/Multiple-Selection-Picker/blob/master/Info/gif0.gif)
 
 Download example project.
 Run ```pod install```  in a terminal in the folder ~/Multiple-Selection-Picker/Example  of project. 

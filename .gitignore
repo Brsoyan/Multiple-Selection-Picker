@@ -15,7 +15,6 @@ xcuserdata
 *.xccheckout
 *.xcscmblueprint
 *.moved-aside
-*.xcodeproj
 *.xcuserstate
 *.xcuserdatad
 DerivedData
@@ -23,10 +22,3 @@ DerivedData
 *.ipa
 *.gcno
 *.gcda
-
-#idea
-.idea/
-
-# Better to save libs in our repo. For next
-Pods/
-

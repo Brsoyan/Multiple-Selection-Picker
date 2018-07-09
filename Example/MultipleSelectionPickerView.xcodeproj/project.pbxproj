@@ -1,0 +1,471 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		53C282CB09CA2C6E3AB868E3 /* Pods_MultipleSelectionPickerView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9DD0B93C58117EB884A9735 /* Pods_MultipleSelectionPickerView.framework */; };
+		AEA6BCEA20F3BF4D009FAEE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA6BCE920F3BF4D009FAEE7 /* AppDelegate.swift */; };
+		AEA6BCEC20F3BF4D009FAEE7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA6BCEB20F3BF4D009FAEE7 /* ViewController.swift */; };
+		AEA6BCEF20F3BF4D009FAEE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEA6BCED20F3BF4D009FAEE7 /* Main.storyboard */; };
+		AEA6BCF120F3BF4F009FAEE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEA6BCF020F3BF4F009FAEE7 /* Assets.xcassets */; };
+		AEA6BCF420F3BF4F009FAEE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEA6BCF220F3BF4F009FAEE7 /* LaunchScreen.storyboard */; };
+		AEA6BD0620F3C009009FAEE7 /* MultipleSelectionPickerScrollHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA6BCFC20F3C009009FAEE7 /* MultipleSelectionPickerScrollHelper.swift */; };
+		AEA6BD0720F3C009009FAEE7 /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA6BCFD20F3C009009FAEE7 /* PickerView.swift */; };
+		AEA6BD0820F3C009009FAEE7 /* SelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA6BCFE20F3C009009FAEE7 /* SelectionView.swift */; };
+		AEA6BD0920F3C009009FAEE7 /* USState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA6BD0020F3C009009FAEE7 /* USState.swift */; };
+		AEA6BD0A20F3C009009FAEE7 /* DatePickerViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA6BD0120F3C009009FAEE7 /* DatePickerViewHandler.swift */; };
+		AEA6BD0B20F3C009009FAEE7 /* UIView+Shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA6BD0220F3C009009FAEE7 /* UIView+Shake.swift */; };
+		AEA6BD0C20F3C009009FAEE7 /* PickerViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA6BD0320F3C009009FAEE7 /* PickerViewHandler.swift */; };
+		AEA6BD0D20F3C009009FAEE7 /* SelectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEA6BD0420F3C009009FAEE7 /* SelectionView.xib */; };
+		AEA6BD0E20F3C009009FAEE7 /* MultipleSelectionPickerViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA6BD0520F3C009009FAEE7 /* MultipleSelectionPickerViewHandler.swift */; };
+		AEA6BD1020F3C41B009FAEE7 /* USStates.json in Resources */ = {isa = PBXBuildFile; fileRef = AEA6BD0F20F3C41B009FAEE7 /* USStates.json */; };
+		AEA6BD1220F3C514009FAEE7 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA6BD1120F3C514009FAEE7 /* State.swift */; };
+		AEA6BD1420F3C6F4009FAEE7 /* DataForPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA6BD1320F3C6F4009FAEE7 /* DataForPicker.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		26A1CEF6A234278C35BA8198 /* Pods-MultipleSelectionPickerView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MultipleSelectionPickerView.release.xcconfig"; path = "Pods/Target Support Files/Pods-MultipleSelectionPickerView/Pods-MultipleSelectionPickerView.release.xcconfig"; sourceTree = "<group>"; };
+		AEA6BCE620F3BF4D009FAEE7 /* MultipleSelectionPickerView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultipleSelectionPickerView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEA6BCE920F3BF4D009FAEE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AEA6BCEB20F3BF4D009FAEE7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AEA6BCEE20F3BF4D009FAEE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AEA6BCF020F3BF4F009FAEE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AEA6BCF320F3BF4F009FAEE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AEA6BCF520F3BF4F009FAEE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEA6BCFC20F3C009009FAEE7 /* MultipleSelectionPickerScrollHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipleSelectionPickerScrollHelper.swift; sourceTree = "<group>"; };
+		AEA6BCFD20F3C009009FAEE7 /* PickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
+		AEA6BCFE20F3C009009FAEE7 /* SelectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionView.swift; sourceTree = "<group>"; };
+		AEA6BD0020F3C009009FAEE7 /* USState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = USState.swift; sourceTree = "<group>"; };
+		AEA6BD0120F3C009009FAEE7 /* DatePickerViewHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerViewHandler.swift; sourceTree = "<group>"; };
+		AEA6BD0220F3C009009FAEE7 /* UIView+Shake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Shake.swift"; sourceTree = "<group>"; };
+		AEA6BD0320F3C009009FAEE7 /* PickerViewHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewHandler.swift; sourceTree = "<group>"; };
+		AEA6BD0420F3C009009FAEE7 /* SelectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectionView.xib; sourceTree = "<group>"; };
+		AEA6BD0520F3C009009FAEE7 /* MultipleSelectionPickerViewHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipleSelectionPickerViewHandler.swift; sourceTree = "<group>"; };
+		AEA6BD0F20F3C41B009FAEE7 /* USStates.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = USStates.json; sourceTree = "<group>"; };
+		AEA6BD1120F3C514009FAEE7 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		AEA6BD1320F3C6F4009FAEE7 /* DataForPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataForPicker.swift; sourceTree = "<group>"; };
+		C34A3A72ABCC49279DD7F634 /* Pods-MultipleSelectionPickerView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MultipleSelectionPickerView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MultipleSelectionPickerView/Pods-MultipleSelectionPickerView.debug.xcconfig"; sourceTree = "<group>"; };
+		D9DD0B93C58117EB884A9735 /* Pods_MultipleSelectionPickerView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MultipleSelectionPickerView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AEA6BCE320F3BF4D009FAEE7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53C282CB09CA2C6E3AB868E3 /* Pods_MultipleSelectionPickerView.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		20B9789B0EFB2F3CD79223A9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D9DD0B93C58117EB884A9735 /* Pods_MultipleSelectionPickerView.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		79EF1856B775D6CE1FEC64A1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C34A3A72ABCC49279DD7F634 /* Pods-MultipleSelectionPickerView.debug.xcconfig */,
+				26A1CEF6A234278C35BA8198 /* Pods-MultipleSelectionPickerView.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AEA6BCDD20F3BF4D009FAEE7 = {
+			isa = PBXGroup;
+			children = (
+				AEA6BCE820F3BF4D009FAEE7 /* MultipleSelectionPickerView */,
+				AEA6BCE720F3BF4D009FAEE7 /* Products */,
+				79EF1856B775D6CE1FEC64A1 /* Pods */,
+				20B9789B0EFB2F3CD79223A9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AEA6BCE720F3BF4D009FAEE7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AEA6BCE620F3BF4D009FAEE7 /* MultipleSelectionPickerView.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AEA6BCE820F3BF4D009FAEE7 /* MultipleSelectionPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				AEA6BCFF20F3C009009FAEE7 /* Resources */,
+				AEA6BCFB20F3C009009FAEE7 /* Source */,
+				AEA6BCE920F3BF4D009FAEE7 /* AppDelegate.swift */,
+				AEA6BD1320F3C6F4009FAEE7 /* DataForPicker.swift */,
+				AEA6BCEB20F3BF4D009FAEE7 /* ViewController.swift */,
+				AEA6BCED20F3BF4D009FAEE7 /* Main.storyboard */,
+				AEA6BCF020F3BF4F009FAEE7 /* Assets.xcassets */,
+				AEA6BCF220F3BF4F009FAEE7 /* LaunchScreen.storyboard */,
+				AEA6BCF520F3BF4F009FAEE7 /* Info.plist */,
+			);
+			path = MultipleSelectionPickerView;
+			sourceTree = "<group>";
+		};
+		AEA6BCFB20F3C009009FAEE7 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				AEA6BCFC20F3C009009FAEE7 /* MultipleSelectionPickerScrollHelper.swift */,
+				AEA6BCFD20F3C009009FAEE7 /* PickerView.swift */,
+				AEA6BCFE20F3C009009FAEE7 /* SelectionView.swift */,
+				AEA6BD0120F3C009009FAEE7 /* DatePickerViewHandler.swift */,
+				AEA6BD0220F3C009009FAEE7 /* UIView+Shake.swift */,
+				AEA6BD0320F3C009009FAEE7 /* PickerViewHandler.swift */,
+				AEA6BD0420F3C009009FAEE7 /* SelectionView.xib */,
+				AEA6BD0520F3C009009FAEE7 /* MultipleSelectionPickerViewHandler.swift */,
+			);
+			name = Source;
+			path = ../../../Source;
+			sourceTree = "<group>";
+		};
+		AEA6BCFF20F3C009009FAEE7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AEA6BD0020F3C009009FAEE7 /* USState.swift */,
+				AEA6BD0F20F3C41B009FAEE7 /* USStates.json */,
+				AEA6BD1120F3C514009FAEE7 /* State.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AEA6BCE520F3BF4D009FAEE7 /* MultipleSelectionPickerView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AEA6BCF820F3BF4F009FAEE7 /* Build configuration list for PBXNativeTarget "MultipleSelectionPickerView" */;
+			buildPhases = (
+				24A7A6A2AD3E4E4676F2E2A8 /* [CP] Check Pods Manifest.lock */,
+				AEA6BCE220F3BF4D009FAEE7 /* Sources */,
+				AEA6BCE320F3BF4D009FAEE7 /* Frameworks */,
+				AEA6BCE420F3BF4D009FAEE7 /* Resources */,
+				3E4D5646A9F57C0E166D7ED1 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MultipleSelectionPickerView;
+			productName = MultipleSelectionPickerView;
+			productReference = AEA6BCE620F3BF4D009FAEE7 /* MultipleSelectionPickerView.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AEA6BCDE20F3BF4D009FAEE7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Hayk Brsoyan";
+				TargetAttributes = {
+					AEA6BCE520F3BF4D009FAEE7 = {
+						CreatedOnToolsVersion = 9.4;
+					};
+				};
+			};
+			buildConfigurationList = AEA6BCE120F3BF4D009FAEE7 /* Build configuration list for PBXProject "MultipleSelectionPickerView" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AEA6BCDD20F3BF4D009FAEE7;
+			productRefGroup = AEA6BCE720F3BF4D009FAEE7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AEA6BCE520F3BF4D009FAEE7 /* MultipleSelectionPickerView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AEA6BCE420F3BF4D009FAEE7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEA6BCF420F3BF4F009FAEE7 /* LaunchScreen.storyboard in Resources */,
+				AEA6BD1020F3C41B009FAEE7 /* USStates.json in Resources */,
+				AEA6BCF120F3BF4F009FAEE7 /* Assets.xcassets in Resources */,
+				AEA6BCEF20F3BF4D009FAEE7 /* Main.storyboard in Resources */,
+				AEA6BD0D20F3C009009FAEE7 /* SelectionView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		24A7A6A2AD3E4E4676F2E2A8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MultipleSelectionPickerView-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3E4D5646A9F57C0E166D7ED1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MultipleSelectionPickerView/Pods-MultipleSelectionPickerView-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MultipleSelectionPickerView/Pods-MultipleSelectionPickerView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AEA6BCE220F3BF4D009FAEE7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEA6BD0C20F3C009009FAEE7 /* PickerViewHandler.swift in Sources */,
+				AEA6BD1420F3C6F4009FAEE7 /* DataForPicker.swift in Sources */,
+				AEA6BD0720F3C009009FAEE7 /* PickerView.swift in Sources */,
+				AEA6BCEC20F3BF4D009FAEE7 /* ViewController.swift in Sources */,
+				AEA6BD1220F3C514009FAEE7 /* State.swift in Sources */,
+				AEA6BD0620F3C009009FAEE7 /* MultipleSelectionPickerScrollHelper.swift in Sources */,
+				AEA6BD0920F3C009009FAEE7 /* USState.swift in Sources */,
+				AEA6BCEA20F3BF4D009FAEE7 /* AppDelegate.swift in Sources */,
+				AEA6BD0E20F3C009009FAEE7 /* MultipleSelectionPickerViewHandler.swift in Sources */,
+				AEA6BD0B20F3C009009FAEE7 /* UIView+Shake.swift in Sources */,
+				AEA6BD0A20F3C009009FAEE7 /* DatePickerViewHandler.swift in Sources */,
+				AEA6BD0820F3C009009FAEE7 /* SelectionView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AEA6BCED20F3BF4D009FAEE7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AEA6BCEE20F3BF4D009FAEE7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AEA6BCF220F3BF4F009FAEE7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AEA6BCF320F3BF4F009FAEE7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AEA6BCF620F3BF4F009FAEE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AEA6BCF720F3BF4F009FAEE7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AEA6BCF920F3BF4F009FAEE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C34A3A72ABCC49279DD7F634 /* Pods-MultipleSelectionPickerView.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4Y57LJ5S9U;
+				INFOPLIST_FILE = MultipleSelectionPickerView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Hayk-Brsoyan.MultipleSelectionPickerView";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AEA6BCFA20F3BF4F009FAEE7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26A1CEF6A234278C35BA8198 /* Pods-MultipleSelectionPickerView.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4Y57LJ5S9U;
+				INFOPLIST_FILE = MultipleSelectionPickerView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Hayk-Brsoyan.MultipleSelectionPickerView";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AEA6BCE120F3BF4D009FAEE7 /* Build configuration list for PBXProject "MultipleSelectionPickerView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEA6BCF620F3BF4F009FAEE7 /* Debug */,
+				AEA6BCF720F3BF4F009FAEE7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AEA6BCF820F3BF4F009FAEE7 /* Build configuration list for PBXNativeTarget "MultipleSelectionPickerView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEA6BCF920F3BF4F009FAEE7 /* Debug */,
+				AEA6BCFA20F3BF4F009FAEE7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AEA6BCDE20F3BF4D009FAEE7 /* Project object */;
+}
