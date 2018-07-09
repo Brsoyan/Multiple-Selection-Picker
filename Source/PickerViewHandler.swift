@@ -8,17 +8,23 @@
 
 import UIKit
 
+protocol PickerDelegate: class {
+    func pickerDidHide(text: String, owner: UIView?, ids:[Int])
+    func pickerTextIsEmpty(owner: UIView?)
+}
+
 class PickerViewHandler: NSObject, UIPickerViewDelegate, UIPickerViewDataSource {
     
-    weak var delegate: PickerEventsDelegate?
+    weak var delegate: PickerDelegate?
     
     private(set) var textField: UITextField
     
-    internal var data: [String]
+    internal var data: (Any & PickerData)
     internal var picker = PickerView.init()
     internal var numberOfComponents = 1
-    internal var selectedRow: Int?
+    internal var selectedRow: Int = 0
     
+    weak var owner: UIView?
     private var pickerViewHeight: CGFloat = 0.0
     
     var onSelectedTitle: ((_ text : String) -> Void)?
@@ -28,7 +34,17 @@ class PickerViewHandler: NSObject, UIPickerViewDelegate, UIPickerViewDataSource 
         }
     }
     
-    init(data: [String]) {
+    lazy var pickerDidHide: () -> Void = { [weak self] in
+        guard let `self` = self else { return }
+        
+        let data = self.selectedRowData()
+        let title = data.title
+        let ids = data.ids
+        
+        self.delegate?.pickerDidHide(text: title, owner: self.owner, ids: ids)
+    }
+    
+    init(data: PickerData) {
         self.textField = UITextField.init(frame: .zero)
         self.data = data
     }
@@ -37,8 +53,9 @@ class PickerViewHandler: NSObject, UIPickerViewDelegate, UIPickerViewDataSource 
         presentPicker(parentVC: parentVC, onSelectedTitle: onSelectedTitle)
     }
     
-    func configWith(parentVC: UIViewController, data: [String]?, onSelectedTitle: ((_ text : String) -> Void)?) {
-        presentPicker(parentVC: parentVC, onSelectedTitle: onSelectedTitle)
+    func configWith(parentVC: UIViewController, owner: UIView?, data: PickerData?, onSelectedTitle: ((_ text : String) -> Void)?) {
+        configWith(parentVC: parentVC, onSelectedTitle: onSelectedTitle)
+        self.owner = owner
         if let data = data {
             self.data = data
         }
@@ -61,8 +78,7 @@ class PickerViewHandler: NSObject, UIPickerViewDelegate, UIPickerViewDataSource 
         textField.inputView = picker
         pickerViewHeight = self.toolBar()
         
-        selectedRow = nil
-        delegate?.pickerWillShow(height: pickerViewHeight)
+        selectedRow = 0
     }
     
     internal func toolBar() -> CGFloat {
@@ -82,7 +98,7 @@ class PickerViewHandler: NSObject, UIPickerViewDelegate, UIPickerViewDataSource 
     }
     
     func title(for row: Int, component: Int?) -> String {
-        return data[row]
+        return data.long(for: row)
     }
     
     func updateData() {
@@ -94,13 +110,9 @@ class PickerViewHandler: NSObject, UIPickerViewDelegate, UIPickerViewDataSource 
     }
     
     func count() -> Int {
-        return data.count
+        return data.count()
     }
     
-    lazy var pickerDidHide: () -> Void = { [weak self] in
-        guard let `self` = self else { return }
-        self.delegate?.pickerDidHide(height: self.pickerViewHeight)
-    }
     
     // MARK: UIPickerViewDelegate, UIPickerViewDataSource
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -124,8 +136,12 @@ class PickerViewHandler: NSObject, UIPickerViewDelegate, UIPickerViewDataSource 
         onSelectedTitle?(title(for: row, component: component))
     }
     
+    internal func selectedRowData() -> (title: String, ids: [Int]) {
+        return (title(for: self.selectedRow, component: 0), [Int]())
+    }
+    
     @objc func dismiss() {
-        if selectedRow == nil {
+        if selectedRow == 0 {
             setTextOnCurrentView(row: 0, component: nil)
         }
         self.parentVC?.view.endEditing(true)

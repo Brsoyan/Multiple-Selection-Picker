@@ -8,11 +8,12 @@
 
 import UIKit
 
-protocol PickerEventsDelegate: class {
-    func pickerWillShow(height: CGFloat)
-    func pickerDidHide(height: CGFloat)
+protocol PickerData: class {
+    func id(for row: Int) -> Int
+    func long(for row: Int) -> String
+    func short(for row: Int) -> String
+    func count() -> Int
 }
-
 
 class PickerView: UIPickerView {
     

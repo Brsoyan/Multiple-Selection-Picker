@@ -8,37 +8,32 @@
 
 import UIKit
 
-protocol MultiplePickerEventsDelegate: class {
-    func pickerDidHide(text: String, owner: UIView?)
-    func warningTextIsEmpty(owner: UIView?)
-}
-
-class MultipleSelectionPickerViewHandler: PickerViewHandler {
+class MultipleSelectionPickerViewHandler: PickerViewHandler, MultipleSelectionPickerScrollDelegate {
     private struct MultipleSelectionConstants {
         static let rowHeight: CGFloat = 44
     }
-        
-    weak var owner: UIView?
-    weak var multiSelectionDelegate: MultiplePickerEventsDelegate?
-    private var selectedRows: Set<Int> = Set(0..<USState.short().count)
-    private var usStateCount = 0
     
-    override var data: [String] {
+    private lazy var selectedRows: Set<Int> = {
+        return Set(0 ..< data.count())
+    }()
+    
+    private var itemCount = 0
+    private var scrollHelper: MultipleSelectionPickerScrollHelper?
+    
+    override var data: PickerData {
         didSet {
-            usStateCount = data.count
+            itemCount = data.count()
         }
     }
     
-    override init(data: [String]) {
+    override init(data: PickerData) {
         super.init(data: data)
-        let tap = UITapGestureRecognizer.init(target: self, action: #selector(select))
+        let tap = UITapGestureRecognizer.init(target: self, action: nil)
         picker.addGestureRecognizer(tap)
-        tap.delegate = self
-    }
-    
-    func configWith(parentVC: UIViewController, owner: UIView?, data: [String]?, onSelectedTitle: ((_ text : String) -> Void)?) {
-        configWith(parentVC: parentVC, data: data, onSelectedTitle: onSelectedTitle)
-        self.owner = owner
+        
+        scrollHelper = MultipleSelectionPickerScrollHelper(owner: self)
+        scrollHelper?.delegate = self
+        tap.delegate = self.scrollHelper
     }
     
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
@@ -53,7 +48,7 @@ class MultipleSelectionPickerViewHandler: PickerViewHandler {
     }
     
     private func setData(view: SelectionView, row: Int) {
-        let title = data[row]
+        let title = data.long(for: row)
         
         var type = view.type
         if selectedRows.contains(row) {
@@ -69,7 +64,7 @@ class MultipleSelectionPickerViewHandler: PickerViewHandler {
         toolBar.tintColor = UIColor.blue
         toolBar.sizeToFit()
         
-        let closeButton = UIBarButtonItem(title: "Close", style: .plain, target: self, action: #selector(dismiss))
+        let closeButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(dismiss))
         let doneButton = UIBarButtonItem(title: "Select", style: .plain, target: self, action: #selector(select))
         let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         toolBar.setItems([closeButton, spaceButton, doneButton], animated: false)
@@ -81,13 +76,15 @@ class MultipleSelectionPickerViewHandler: PickerViewHandler {
     
     @objc func select() {
         let row = picker.selectedRow(inComponent: 0)
+        selectRow(row: row)
+    }
+    
+    private func selectRow(row: Int) {
         let view = picker.view(forRow: row, forComponent: 0)
         guard let selectedView = view as? SelectionView else { return }
         
         if row == 0 && !selectedRows.contains(row) {
-            for idx in 1..<data.count {
-                selectedRows.insert(idx)
-            }
+            selectedRows = Set(0 ..< data.count())
         } else if row == 0 && selectedRows.contains(row) {
             selectedRows.removeAll()
         }
@@ -95,54 +92,52 @@ class MultipleSelectionPickerViewHandler: PickerViewHandler {
         let selected = selectedView.select()
         if selected == true {
             selectedRows.insert(row)
-            if selectedRows.count + 1 == usStateCount {
+            if selectedRows.count + 1 == itemCount {
                 selectedRows.insert(0)
             }
         } else {
             selectedRows.remove(row)
             selectedRows.remove(0)
         }
-        picker.reloadAllComponents()
-    }
-    
-    override func dismiss() {
-        let text = title()
-        if !text.isEmpty {
-            self.multiSelectionDelegate?.pickerDidHide(text: title(), owner: owner)
-        } else {
-            self.multiSelectionDelegate?.warningTextIsEmpty(owner: owner)
+        
+        DispatchQueue.main.async {
+            self.picker.reloadAllComponents()
         }
-        super.dismiss()
     }
     
-    private func title() -> String {
+    override func selectedRowData() -> (title: String, ids: [Int]) {
         var str = ""
+        var ids = [Int]()
         
-        if selectedRows.contains(0) {
-            str = USState.short().first!
+        let selected = selectedRows.sorted()
+        
+        if selected.contains(0) {
+            str = data.short(for: 0)
         } else if selectedRows.count > 0 {
-            str = USState.short()[selectedRows.first!]
             
-            for idx in selectedRows.dropFirst() {
-                str = str + ", " + USState.short()[idx]
+            let first = selected.first!
+            str = data.short(for: first)
+            ids.append(data.id(for: first))
+            
+            for idx in selected.dropFirst() {
+                str = str + ", " + data.short(for: idx)
+                ids.append(data.id(for: idx))
             }
         }
         
-        return str
-    }
-}
-
-extension MultipleSelectionPickerViewHandler: UIGestureRecognizerDelegate {
-    
-    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRequireFailureOf otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        if str.isEmpty == true {
+            str = data.short(for: 0)
+            selectRow(row: 0)
+            self.delegate?.pickerTextIsEmpty(owner: owner)
+        }
         
-        if otherGestureRecognizer is UITapGestureRecognizer && gestureRecognizer is UITapGestureRecognizer {
-            if let row = selectedRow {
-                let selectedView = picker.view(forRow: row, forComponent: 0)
-                if selectedView?.frame.contains(otherGestureRecognizer.location(in: selectedView)) == true {
-                    select()
-                }
-            }
+        return (str, ids)
+    }
+    
+    public func isSelectInRow(gestureRecognizer: UIGestureRecognizer) -> Bool {
+        let selectedView = picker.view(forRow: selectedRow, forComponent: 0)
+        if selectedView?.frame.contains(gestureRecognizer.location(in: selectedView)) == true {
+            return true
         }
         return false
     }

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qxD-Wh-8u3">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="FAd-0V-a5H">
+            <objects>
+                <viewController id="qxD-Wh-8u3" customClass="ViewController" customModule="MultipleSelectionPickerView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Y9Y-Tb-jlc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gBe-ZT-I8O">
+                                <rect key="frame" x="128" y="203" width="119" height="30"/>
+                                <state key="normal" title="MultipleSelection"/>
+                                <connections>
+                                    <action selector="multiSelection:" destination="qxD-Wh-8u3" eventType="touchUpInside" id="QmA-H6-pjZ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IF2-jx-9dT">
+                                <rect key="frame" x="20" y="60" width="335" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fvl-7Q-gxu">
+                                <rect key="frame" x="171" y="143" width="33" height="30"/>
+                                <state key="normal" title="Date"/>
+                                <connections>
+                                    <action selector="date:" destination="qxD-Wh-8u3" eventType="touchUpInside" id="tFQ-Vh-YE7"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DAU-jz-ld2">
+                                <rect key="frame" x="16" y="253" width="343" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fvl-7Q-gxu" firstAttribute="top" secondItem="IF2-jx-9dT" secondAttribute="bottom" constant="60" id="4uY-be-j52"/>
+                            <constraint firstItem="IF2-jx-9dT" firstAttribute="top" secondItem="vHW-3h-Zc1" secondAttribute="top" constant="40" id="9bP-1x-TGq"/>
+                            <constraint firstItem="vHW-3h-Zc1" firstAttribute="trailing" secondItem="DAU-jz-ld2" secondAttribute="trailing" constant="16" id="Bsv-wl-hRr"/>
+                            <constraint firstItem="vHW-3h-Zc1" firstAttribute="trailing" secondItem="IF2-jx-9dT" secondAttribute="trailing" constant="20" id="M3Z-oU-bS7"/>
+                            <constraint firstItem="gBe-ZT-I8O" firstAttribute="top" secondItem="fvl-7Q-gxu" secondAttribute="bottom" constant="30" id="WEI-ba-dm4"/>
+                            <constraint firstItem="DAU-jz-ld2" firstAttribute="leading" secondItem="vHW-3h-Zc1" secondAttribute="leading" constant="16" id="eGc-tj-CCQ"/>
+                            <constraint firstItem="gBe-ZT-I8O" firstAttribute="centerX" secondItem="fvl-7Q-gxu" secondAttribute="centerX" id="eGd-FV-hHp"/>
+                            <constraint firstItem="DAU-jz-ld2" firstAttribute="top" secondItem="gBe-ZT-I8O" secondAttribute="bottom" constant="20" id="gKd-rL-Hw1"/>
+                            <constraint firstItem="gBe-ZT-I8O" firstAttribute="centerX" secondItem="vHW-3h-Zc1" secondAttribute="centerX" id="p4s-AG-Ucn"/>
+                            <constraint firstItem="IF2-jx-9dT" firstAttribute="leading" secondItem="vHW-3h-Zc1" secondAttribute="leading" constant="20" id="vLj-KU-GgR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vHW-3h-Zc1"/>
+                    </view>
+                    <connections>
+                        <outlet property="states" destination="DAU-jz-ld2" id="kY8-a5-vg5"/>
+                        <outlet property="titileLabel" destination="IF2-jx-9dT" id="J8C-Fm-ZAz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lQU-hZ-P6Z" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-89" y="212"/>
+        </scene>
+    </scenes>
+</document>

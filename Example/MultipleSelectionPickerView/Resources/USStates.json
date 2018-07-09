@@ -1,0 +1,359 @@
+[{
+ "id": 0,
+ "names": {
+ "1": "All",
+ "2": "All"
+ },
+ "abbr": "All"
+ },
+ {
+ "id": 1,
+ "names": {
+ "1": "Alabama",
+ "2": "Alabama"
+ },
+ "abbr": "AL"
+ }, {
+ "id": 2,
+ "names": {
+ "1": "Alaska",
+ "2": "Alaska"
+ },
+ "abbr": "AK"
+ }, {
+ "id": 3,
+ "names": {
+ "1": "Arizona",
+ "2": "Arizona"
+ },
+ "abbr": "AZ"
+ }, {
+ "id": 4,
+ "names": {
+ "1": "Arkansas",
+ "2": "Arkansas"
+ },
+ "abbr": "AR"
+ }, {
+ "id": 5,
+ "names": {
+ "1": "California",
+ "2": "California"
+ },
+ "abbr": "CA"
+ }, {
+ "id": 6,
+ "names": {
+ "1": "Colorado",
+ "2": "Colorado"
+ },
+ "abbr": "CO"
+ }, {
+ "id": 7,
+ "names": {
+ "1": "Connecticut",
+ "2": "Connecticut"
+ },
+ "abbr": "CT"
+ }, {
+ "id": 8,
+ "names": {
+ "1": "Delaware",
+ "2": "Delaware"
+ },
+ "abbr": "DE"
+ }, {
+ "id": 9,
+ "names": {
+ "1": "Florida",
+ "2": "Florida"
+ },
+ "abbr": "FL"
+ }, {
+ "id": 10,
+ "names": {
+ "1": "Georgia",
+ "2": "Georgia"
+ },
+ "abbr": "GA"
+ }, {
+ "id": 11,
+ "names": {
+ "1": "Hawaii",
+ "2": "Hawai"
+ },
+ "abbr": "HI"
+ }, {
+ "id": 12,
+ "names": {
+ "1": "Idaho",
+ "2": "Idaho"
+ },
+ "abbr": "ID"
+ }, {
+ "id": 13,
+ "names": {
+ "1": "Illinois",
+ "2": "Illinois"
+ },
+ "abbr": "IL"
+ }, {
+ "id": 14,
+ "names": {
+ "1": "Indiana",
+ "2": "Indiana"
+ },
+ "abbr": "IN"
+ }, {
+ "id": 15,
+ "names": {
+ "1": "Iowa",
+ "2": "Iowa"
+ },
+ "abbr": "IA"
+ }, {
+ "id": 16,
+ "names": {
+ "1": "Kansas",
+ "2": "Kansas"
+ },
+ "abbr": "KS"
+ }, {
+ "id": 17,
+ "names": {
+ "1": "Kentucky",
+ "2": "Kentucky"
+ },
+ "abbr": "KY"
+ }, {
+ "id": 18,
+ "names": {
+ "1": "Louisiana",
+ "2": "Luisiana"
+ },
+ "abbr": "LA"
+ }, {
+ "id": 19,
+ "names": {
+ "1": "Maine",
+ "2": "Maine"
+ },
+ "abbr": "ME"
+ }, {
+ "id": 20,
+ "names": {
+ "1": "Maryland",
+ "2": "Maryland"
+ },
+ "abbr": "MD"
+ }, {
+ "id": 21,
+ "names": {
+ "1": "Massachusetts",
+ "2": "Massachusetts"
+ },
+ "abbr": "MA"
+ }, {
+ "id": 22,
+ "names": {
+ "1": "Michigan",
+ "2": "Michigan"
+ },
+ "abbr": "MI"
+ }, {
+ "id": 23,
+ "names": {
+ "1": "Minnesota",
+ "2": "Minnesota"
+ },
+ "abbr": "MN"
+ }, {
+ "id": 24,
+ "names": {
+ "1": "Mississippi",
+ "2": "Misisipí"
+ },
+ "abbr": "MS"
+ }, {
+ "id": 25,
+ "names": {
+ "1": "Missouri",
+ "2": "Misuri"
+ },
+ "abbr": "MO"
+ }, {
+ "id": 26,
+ "names": {
+ "1": "Montana",
+ "2": "Montana"
+ },
+ "abbr": "MT"
+ }, {
+ "id": 27,
+ "names": {
+ "1": "Nebraska",
+ "2": "Nebraska"
+ },
+ "abbr": "NE"
+ }, {
+ "id": 28,
+ "names": {
+ "1": "Nevada",
+ "2": "Nevada"
+ },
+ "abbr": "NV"
+ }, {
+ "id": 29,
+ "names": {
+ "1": "New Hampshire",
+ "2": "Nueva Hampshire"
+ },
+ "abbr": "NH"
+ }, {
+ "id": 30,
+ "names": {
+ "1": "New Jersey",
+ "2": "Nueva Jersey"
+ },
+ "abbr": "NJ"
+ }, {
+ "id": 31,
+ "names": {
+ "1": "New Mexico",
+ "2": "Nuevo Mexico"
+ },
+ "abbr": "NM"
+ }, {
+ "id": 32,
+ "names": {
+ "1": "New York",
+ "2": "Nueva York"
+ },
+ "abbr": "NY"
+ }, {
+ "id": 33,
+ "names": {
+ "1": "North Carolina",
+ "2": "Carolina del Norte"
+ },
+ "abbr": "NC"
+ }, {
+ "id": 34,
+ "names": {
+ "1": "North Dakota",
+ "2": "Dakota del Norte"
+ },
+ "abbr": "ND"
+ }, {
+ "id": 35,
+ "names": {
+ "1": "Ohio",
+ "2": "Ohio"
+ },
+ "abbr": "OH"
+ }, {
+ "id": 36,
+ "names": {
+ "1": "Oklahoma",
+ "2": "Oklahoma"
+ },
+ "abbr": "OK"
+ }, {
+ "id": 37,
+ "names": {
+ "1": "Oregon",
+ "2": "Oregón"
+ },
+ "abbr": "OR"
+ }, {
+ "id": 38,
+ "names": {
+ "1": "Pennsylvania",
+ "2": "Pensilvania"
+ },
+ "abbr": "PA"
+ }, {
+ "id": 39,
+ "names": {
+ "1": "Rhode Island",
+ "2": "Rhode Island"
+ },
+ "abbr": "RI"
+ }, {
+ "id": 40,
+ "names": {
+ "1": "South Carolina",
+ "2": "Carolina del Sur"
+ },
+ "abbr": "SC"
+ }, {
+ "id": 41,
+ "names": {
+ "1": "South Dakota",
+ "2": "Dakota del Sur"
+ },
+ "abbr": "SD"
+ }, {
+ "id": 42,
+ "names": {
+ "1": "Tennessee",
+ "2": "Tennesse"
+ },
+ "abbr": "TN"
+ }, {
+ "id": 43,
+ "names": {
+ "1": "Texas",
+ "2": "Texas"
+ },
+ "abbr": "TX"
+ }, {
+ "id": 44,
+ "names": {
+ "1": "Utah",
+ "2": "Utah"
+ },
+ "abbr": "UT"
+ }, {
+ "id": 45,
+ "names": {
+ "1": "Vermont",
+ "2": "Vermont"
+ },
+ "abbr": "VT"
+ }, {
+ "id": 46,
+ "names": {
+ "1": "Virginia",
+ "2": "Virginia"
+ },
+ "abbr": "VA"
+ }, {
+ "id": 47,
+ "names": {
+ "1": "Washington",
+ "2": "Washington"
+ },
+ "abbr": "WA"
+ }, {
+ "id": 48,
+ "names": {
+ "1": "West Virginia",
+ "2": "Virginia del Oeste"
+ },
+ "abbr": "WV"
+ }, {
+ "id": 49,
+ "names": {
+ "1": "Wisconsin",
+ "2": "Wisconsin"
+ },
+ "abbr": "WI"
+ }, {
+ "id": 50,
+ "names": {
+ "1": "Wyoming",
+ "2": "Wyoming"
+ },
+ "abbr": "WY"
+ }]

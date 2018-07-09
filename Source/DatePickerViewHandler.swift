@@ -18,7 +18,7 @@ class DatePickerViewHandler: PickerViewHandler {
     
     var onSelectedDate: ((_ day: Int, _ month: String, _ year: Int) -> Void)?
     
-    override init(data: [String]) {
+    override init(data: PickerData) {
         super.init(data: data)
         self.commonSetup()
         self.numberOfComponents = 3
@@ -113,7 +113,7 @@ class DatePickerViewHandler: PickerViewHandler {
     }
     
     override func dismiss() {
-        if selectedRow == nil {
+        if selectedRow == 0 {
             onSelectedDate?(1, months[0], years[0])
         }
         
