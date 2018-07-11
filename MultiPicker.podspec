@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.source               = { :git => 'https://github.com/Brsoyan/Multiple-Selection-Picker', :tag => s.version }
   s.social_media_url     = "http://twitter.com/Brsoyan"
   s.platform             = :ios, "9.0"  
-  s.source_files         = "Source/**/*.swift"
+  s.source_files         = "Source/*.swift"
   s.exclude_files        = "Source/Exclude"
   s.resources            = "Source/*.png"
   s.swift_version        = "4.1"
