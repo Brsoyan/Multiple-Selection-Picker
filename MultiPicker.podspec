@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.platform             = :ios, "9.0"  
   s.source_files         = "Source/*.swift"
   s.exclude_files        = "Source/Exclude"
-  s.resources            = "Source/*.png"
+  s.resources            = "Source/src/*.png", "Source/src/*.xib",
   s.swift_version        = "4.1"
 
   s.dependency 'SwiftyJSON', '4.1.0'
