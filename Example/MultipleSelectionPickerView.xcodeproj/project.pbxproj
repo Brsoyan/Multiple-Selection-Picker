@@ -13,15 +13,7 @@
 		AEA6BCEF20F3BF4D009FAEE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEA6BCED20F3BF4D009FAEE7 /* Main.storyboard */; };
 		AEA6BCF120F3BF4F009FAEE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEA6BCF020F3BF4F009FAEE7 /* Assets.xcassets */; };
 		AEA6BCF420F3BF4F009FAEE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEA6BCF220F3BF4F009FAEE7 /* LaunchScreen.storyboard */; };
-		AEA6BD0620F3C009009FAEE7 /* MultipleSelectionPickerScrollHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA6BCFC20F3C009009FAEE7 /* MultipleSelectionPickerScrollHelper.swift */; };
-		AEA6BD0720F3C009009FAEE7 /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA6BCFD20F3C009009FAEE7 /* PickerView.swift */; };
-		AEA6BD0820F3C009009FAEE7 /* SelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA6BCFE20F3C009009FAEE7 /* SelectionView.swift */; };
 		AEA6BD0920F3C009009FAEE7 /* USState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA6BD0020F3C009009FAEE7 /* USState.swift */; };
-		AEA6BD0A20F3C009009FAEE7 /* DatePickerViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA6BD0120F3C009009FAEE7 /* DatePickerViewHandler.swift */; };
-		AEA6BD0B20F3C009009FAEE7 /* UIView+Shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA6BD0220F3C009009FAEE7 /* UIView+Shake.swift */; };
-		AEA6BD0C20F3C009009FAEE7 /* PickerViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA6BD0320F3C009009FAEE7 /* PickerViewHandler.swift */; };
-		AEA6BD0D20F3C009009FAEE7 /* SelectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEA6BD0420F3C009009FAEE7 /* SelectionView.xib */; };
-		AEA6BD0E20F3C009009FAEE7 /* MultipleSelectionPickerViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA6BD0520F3C009009FAEE7 /* MultipleSelectionPickerViewHandler.swift */; };
 		AEA6BD1020F3C41B009FAEE7 /* USStates.json in Resources */ = {isa = PBXBuildFile; fileRef = AEA6BD0F20F3C41B009FAEE7 /* USStates.json */; };
 		AEA6BD1220F3C514009FAEE7 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA6BD1120F3C514009FAEE7 /* State.swift */; };
 		AEA6BD1420F3C6F4009FAEE7 /* DataForPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA6BD1320F3C6F4009FAEE7 /* DataForPicker.swift */; };
@@ -36,15 +28,7 @@
 		AEA6BCF020F3BF4F009FAEE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AEA6BCF320F3BF4F009FAEE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AEA6BCF520F3BF4F009FAEE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AEA6BCFC20F3C009009FAEE7 /* MultipleSelectionPickerScrollHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipleSelectionPickerScrollHelper.swift; sourceTree = "<group>"; };
-		AEA6BCFD20F3C009009FAEE7 /* PickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
-		AEA6BCFE20F3C009009FAEE7 /* SelectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionView.swift; sourceTree = "<group>"; };
 		AEA6BD0020F3C009009FAEE7 /* USState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = USState.swift; sourceTree = "<group>"; };
-		AEA6BD0120F3C009009FAEE7 /* DatePickerViewHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerViewHandler.swift; sourceTree = "<group>"; };
-		AEA6BD0220F3C009009FAEE7 /* UIView+Shake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Shake.swift"; sourceTree = "<group>"; };
-		AEA6BD0320F3C009009FAEE7 /* PickerViewHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewHandler.swift; sourceTree = "<group>"; };
-		AEA6BD0420F3C009009FAEE7 /* SelectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectionView.xib; sourceTree = "<group>"; };
-		AEA6BD0520F3C009009FAEE7 /* MultipleSelectionPickerViewHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipleSelectionPickerViewHandler.swift; sourceTree = "<group>"; };
 		AEA6BD0F20F3C41B009FAEE7 /* USStates.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = USStates.json; sourceTree = "<group>"; };
 		AEA6BD1120F3C514009FAEE7 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		AEA6BD1320F3C6F4009FAEE7 /* DataForPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataForPicker.swift; sourceTree = "<group>"; };
@@ -103,7 +87,6 @@
 			isa = PBXGroup;
 			children = (
 				AEA6BCFF20F3C009009FAEE7 /* Resources */,
-				AEA6BCFB20F3C009009FAEE7 /* Source */,
 				AEA6BCE920F3BF4D009FAEE7 /* AppDelegate.swift */,
 				AEA6BD1320F3C6F4009FAEE7 /* DataForPicker.swift */,
 				AEA6BCEB20F3BF4D009FAEE7 /* ViewController.swift */,
@@ -113,22 +96,6 @@
 				AEA6BCF520F3BF4F009FAEE7 /* Info.plist */,
 			);
 			path = MultipleSelectionPickerView;
-			sourceTree = "<group>";
-		};
-		AEA6BCFB20F3C009009FAEE7 /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				AEA6BCFC20F3C009009FAEE7 /* MultipleSelectionPickerScrollHelper.swift */,
-				AEA6BCFD20F3C009009FAEE7 /* PickerView.swift */,
-				AEA6BCFE20F3C009009FAEE7 /* SelectionView.swift */,
-				AEA6BD0120F3C009009FAEE7 /* DatePickerViewHandler.swift */,
-				AEA6BD0220F3C009009FAEE7 /* UIView+Shake.swift */,
-				AEA6BD0320F3C009009FAEE7 /* PickerViewHandler.swift */,
-				AEA6BD0420F3C009009FAEE7 /* SelectionView.xib */,
-				AEA6BD0520F3C009009FAEE7 /* MultipleSelectionPickerViewHandler.swift */,
-			);
-			name = Source;
-			path = ../../../Source;
 			sourceTree = "<group>";
 		};
 		AEA6BCFF20F3C009009FAEE7 /* Resources */ = {
@@ -205,7 +172,6 @@
 				AEA6BD1020F3C41B009FAEE7 /* USStates.json in Resources */,
 				AEA6BCF120F3BF4F009FAEE7 /* Assets.xcassets in Resources */,
 				AEA6BCEF20F3BF4D009FAEE7 /* Main.storyboard in Resources */,
-				AEA6BD0D20F3C009009FAEE7 /* SelectionView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,10 +203,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MultipleSelectionPickerView/Pods-MultipleSelectionPickerView-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MultiPickerView/MultiPickerView.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MultiPickerView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -255,18 +223,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AEA6BD0C20F3C009009FAEE7 /* PickerViewHandler.swift in Sources */,
 				AEA6BD1420F3C6F4009FAEE7 /* DataForPicker.swift in Sources */,
-				AEA6BD0720F3C009009FAEE7 /* PickerView.swift in Sources */,
 				AEA6BCEC20F3BF4D009FAEE7 /* ViewController.swift in Sources */,
 				AEA6BD1220F3C514009FAEE7 /* State.swift in Sources */,
-				AEA6BD0620F3C009009FAEE7 /* MultipleSelectionPickerScrollHelper.swift in Sources */,
 				AEA6BD0920F3C009009FAEE7 /* USState.swift in Sources */,
 				AEA6BCEA20F3BF4D009FAEE7 /* AppDelegate.swift in Sources */,
-				AEA6BD0E20F3C009009FAEE7 /* MultipleSelectionPickerViewHandler.swift in Sources */,
-				AEA6BD0B20F3C009009FAEE7 /* UIView+Shake.swift in Sources */,
-				AEA6BD0A20F3C009009FAEE7 /* DatePickerViewHandler.swift in Sources */,
-				AEA6BD0820F3C009009FAEE7 /* SelectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

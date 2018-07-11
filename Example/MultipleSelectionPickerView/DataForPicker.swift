@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import MultiPickerView
 
 
 class DataForPicker: PickerData {

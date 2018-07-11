@@ -1,0 +1,6 @@
+framework module MultiPickerView {
+  umbrella header "MultiPickerView-umbrella.h"
+
+  export *
+  module * { export * }
+}
