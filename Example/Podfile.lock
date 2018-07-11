@@ -1,10 +1,10 @@
 PODS:
-  - MultiPickerView (0.0.3):
+  - MultiPickerView (0.0.4):
     - SwiftyJSON (= 4.1.0)
   - SwiftyJSON (4.1.0)
 
 DEPENDENCIES:
-  - MultiPickerView (= 0.0.3)
+  - MultiPickerView (= 0.0.4)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -12,9 +12,9 @@ SPEC REPOS:
     - SwiftyJSON
 
 SPEC CHECKSUMS:
-  MultiPickerView: fa307305f1ae56df7a2bb3f013e2caa16e9919f6
+  MultiPickerView: 246f533e0cfe258c7804cb290520529a18f03d7c
   SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
 
-PODFILE CHECKSUM: 4f213a9fb08745cf924d3af4b9a348de2e3de0a5
+PODFILE CHECKSUM: a17490c854832df6e333d08870ce6909d1e6b128
 
 COCOAPODS: 1.5.3
