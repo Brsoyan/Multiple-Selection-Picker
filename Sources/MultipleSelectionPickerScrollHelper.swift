@@ -12,7 +12,7 @@ protocol MultipleSelectionPickerScrollDelegate: class {
     func select()
 }
 
-class MultipleSelectionPickerScrollHelper: NSObject, UIGestureRecognizerDelegate {
+public class MultipleSelectionPickerScrollHelper: NSObject, UIGestureRecognizerDelegate {
     
     weak var delegate: MultipleSelectionPickerScrollDelegate?
     weak var owner: MultipleSelectionPickerViewHandler?
@@ -23,7 +23,7 @@ class MultipleSelectionPickerScrollHelper: NSObject, UIGestureRecognizerDelegate
         self.owner = owner
     }
     
-    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRequireFailureOf otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+    public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRequireFailureOf otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         if otherGestureRecognizer is UITapGestureRecognizer && gestureRecognizer is UITapGestureRecognizer {
             shouldRecognizeSimultaneously = 0
 
@@ -35,7 +35,7 @@ class MultipleSelectionPickerScrollHelper: NSObject, UIGestureRecognizerDelegate
         return false
     }
     
-    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+    public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
 
         if otherGestureRecognizer is UITapGestureRecognizer && shouldRecognizeSimultaneously == 0 && isSelectInRow == true {
             delegate?.select()

@@ -8,14 +8,14 @@
 
 import UIKit
 
-protocol PickerDelegate: class {
+public protocol PickerDelegate: class {
     func pickerDidHide(text: String, owner: UIView?, ids:[Int])
     func pickerTextIsEmpty(owner: UIView?)
 }
 
-class PickerViewHandler: NSObject, UIPickerViewDelegate, UIPickerViewDataSource {
+public class PickerViewHandler: NSObject, UIPickerViewDelegate, UIPickerViewDataSource {
     
-    weak var delegate: PickerDelegate?
+    public weak var delegate: PickerDelegate?
     
     private(set) var textField: UITextField
     
@@ -44,16 +44,16 @@ class PickerViewHandler: NSObject, UIPickerViewDelegate, UIPickerViewDataSource 
         self.delegate?.pickerDidHide(text: title, owner: self.owner, ids: ids)
     }
     
-    init(data: PickerData) {
+    public init(data: PickerData) {
         self.textField = UITextField.init(frame: .zero)
         self.data = data
     }
     
-    func configWith(parentVC: UIViewController, onSelectedTitle: ((_ text : String) -> Void)?) {
+    public func configWith(parentVC: UIViewController, onSelectedTitle: ((_ text : String) -> Void)?) {
         presentPicker(parentVC: parentVC, onSelectedTitle: onSelectedTitle)
     }
     
-    func configWith(parentVC: UIViewController, owner: UIView?, data: PickerData?, onSelectedTitle: ((_ text : String) -> Void)?) {
+    public func configWith(parentVC: UIViewController, owner: UIView?, data: PickerData?, onSelectedTitle: ((_ text : String) -> Void)?) {
         configWith(parentVC: parentVC, onSelectedTitle: onSelectedTitle)
         self.owner = owner
         if let data = data {
@@ -115,19 +115,19 @@ class PickerViewHandler: NSObject, UIPickerViewDelegate, UIPickerViewDataSource 
     
     
     // MARK: UIPickerViewDelegate, UIPickerViewDataSource
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+    public func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return numberOfComponents
     }
     
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return count()
     }
     
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    public func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return title(for: row, component: component)
     }
     
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+    public func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         selectedRow = row
         setTextOnCurrentView(row: row, component: component)
     }

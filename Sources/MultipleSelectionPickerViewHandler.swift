@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MultipleSelectionPickerViewHandler: PickerViewHandler, MultipleSelectionPickerScrollDelegate {
+public class MultipleSelectionPickerViewHandler: PickerViewHandler, MultipleSelectionPickerScrollDelegate {
     private struct MultipleSelectionConstants {
         static let rowHeight: CGFloat = 44
     }
@@ -26,7 +26,7 @@ class MultipleSelectionPickerViewHandler: PickerViewHandler, MultipleSelectionPi
         }
     }
     
-    override init(data: PickerData) {
+    override public init(data: PickerData) {
         super.init(data: data)
         let tap = UITapGestureRecognizer.init(target: self, action: nil)
         picker.addGestureRecognizer(tap)
@@ -36,7 +36,7 @@ class MultipleSelectionPickerViewHandler: PickerViewHandler, MultipleSelectionPi
         tap.delegate = self.scrollHelper
     }
     
-    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+    public func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         guard let reusingView = view as? SelectionView else {
             let view = SelectionView.init(frame: CGRect(x: 0, y: 0, width: pickerView.bounds.width * 0.8, height: MultipleSelectionConstants.rowHeight))
             setData(view: view, row: row)

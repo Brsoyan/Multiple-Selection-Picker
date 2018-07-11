@@ -8,18 +8,18 @@
 
 import UIKit
 
-protocol PickerData: class {
+public protocol PickerData: class {
     func id(for row: Int) -> Int
     func long(for row: Int) -> String
     func short(for row: Int) -> String
     func count() -> Int
 }
 
-class PickerView: UIPickerView {
+public class PickerView: UIPickerView {
     
     var pickerDidHide: (() -> Void)?
     
-    override func removeFromSuperview() {
+    override public func removeFromSuperview() {
         super.removeFromSuperview()
         self.pickerDidHide?()
     }

@@ -7,7 +7,7 @@
 //
 import UIKit
 
-class DatePickerViewHandler: PickerViewHandler {
+public class DatePickerViewHandler: PickerViewHandler {
     private var months = [String]()
     private var years = [Int]()
     private var days = [Int]()
@@ -18,7 +18,7 @@ class DatePickerViewHandler: PickerViewHandler {
     
     var onSelectedDate: ((_ day: Int, _ month: String, _ year: Int) -> Void)?
     
-    override init(data: PickerData) {
+    override public init(data: PickerData) {
         super.init(data: data)
         self.commonSetup()
         self.numberOfComponents = 3
@@ -71,7 +71,7 @@ class DatePickerViewHandler: PickerViewHandler {
         }
     }
 
-    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+    public func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         let title = self.title(for: row, component: component)
         
         guard let reusingLabel = view as? UILabel else {
@@ -86,7 +86,7 @@ class DatePickerViewHandler: PickerViewHandler {
         return reusingLabel
     }
     
-    override func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    override public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         switch component {
         case Column.first:
             return days.count
@@ -99,7 +99,7 @@ class DatePickerViewHandler: PickerViewHandler {
         }
     }
     
-    override func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+    override public func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         selectedRow = row
         let day = self.picker.selectedRow(inComponent: Column.first) + 1
         let month = self.picker.selectedRow(inComponent: Column.second) + 1
