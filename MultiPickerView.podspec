@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name                 = "MultiPickerView"
-  s.version              = "0.0.5"
+  s.version              = "0.0.6"
   s.summary              = "Picker View with multi row selection."
   s.homepage             = "https://github.com/Brsoyan/Multiple-Selection-Picker"
   s.license              = 'MIT'

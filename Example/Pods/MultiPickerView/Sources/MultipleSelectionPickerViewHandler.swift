@@ -13,10 +13,6 @@ public class MultipleSelectionPickerViewHandler: PickerViewHandler, MultipleSele
         static let rowHeight: CGFloat = 44
     }
     
-    private lazy var selectedRows: Set<Int> = {
-        return Set(0 ..< data.count())
-    }()
-    
     private var itemCount = 0
     private var scrollHelper: MultipleSelectionPickerScrollHelper?
     

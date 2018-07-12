@@ -38,6 +38,10 @@ public class PickerViewHandler: NSObject, UIPickerViewDelegate, UIPickerViewData
         }
     }
     
+    internal lazy var selectedRows: Set<Int> = {
+        return Set(0 ..< data.count())
+    }()
+    
     lazy var pickerDidHide: () -> Void = { [weak self] in
         guard let `self` = self else { return }
         
@@ -57,11 +61,16 @@ public class PickerViewHandler: NSObject, UIPickerViewDelegate, UIPickerViewData
         presentPicker(parentVC: parentVC, onSelectedTitle: onSelectedTitle)
     }
     
-    public func configWith(parentVC: UIViewController, owner: UIView?, data: PickerData?, leftButtonText: String?, rightButtonText: String?, tintColor: UIColor?, onSelectedTitle: ((_ text : String) -> Void)?) {
+    public func configWith(parentVC: UIViewController, owner: UIView?, data: PickerData?, leftButtonText: String?, rightButtonText: String?, tintColor: UIColor?, selectedRows: Set<Int>?, onSelectedTitle: ((_ text : String) -> Void)?) {
         
         self.leftButtonText = leftButtonText
         self.rightButtonText = rightButtonText
         self.tintColor = tintColor
+        if let rows = selectedRows {
+            if rows.count > 0 {
+                self.selectedRows = rows
+            }
+        }
         
         configWith(parentVC: parentVC, onSelectedTitle: onSelectedTitle)
         self.owner = owner

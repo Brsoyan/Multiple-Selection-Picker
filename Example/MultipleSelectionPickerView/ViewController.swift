@@ -39,6 +39,7 @@ class ViewController: UIViewController {
                                         leftButtonText: "Select",
                                         rightButtonText: "Done",
                                         tintColor: nil,
+                                        selectedRows: [1],
                                         onSelectedTitle: onItemSelected)
     }
 }
