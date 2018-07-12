@@ -3,7 +3,7 @@
 
 ## Integration
 
-1. If you haven't already, install the latest version of [CocoaPods](https://www.google.com).
+1. You can use [CocoaPods](https://www.google.com) to install MultiPickerView by adding it to your Podfile.
 2. Add this line to your Podfile
         ``` pod 'MultiPickerView' ```
 
