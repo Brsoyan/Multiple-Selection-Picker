@@ -24,6 +24,10 @@ public class PickerViewHandler: NSObject, UIPickerViewDelegate, UIPickerViewData
     internal var numberOfComponents = 1
     internal var selectedRow: Int = 0
     
+    internal var leftButtonText: String?
+    internal var rightButtonText: String?
+    internal var tintColor: UIColor?
+    
     weak var owner: UIView?
     private var pickerViewHeight: CGFloat = 0.0
     
@@ -53,7 +57,12 @@ public class PickerViewHandler: NSObject, UIPickerViewDelegate, UIPickerViewData
         presentPicker(parentVC: parentVC, onSelectedTitle: onSelectedTitle)
     }
     
-    public func configWith(parentVC: UIViewController, owner: UIView?, data: PickerData?, onSelectedTitle: ((_ text : String) -> Void)?) {
+    public func configWith(parentVC: UIViewController, owner: UIView?, data: PickerData?, leftButtonText: String?, rightButtonText: String?, tintColor: UIColor?, onSelectedTitle: ((_ text : String) -> Void)?) {
+        
+        self.leftButtonText = leftButtonText
+        self.rightButtonText = rightButtonText
+        self.tintColor = tintColor
+        
         configWith(parentVC: parentVC, onSelectedTitle: onSelectedTitle)
         self.owner = owner
         if let data = data {
@@ -85,10 +94,18 @@ public class PickerViewHandler: NSObject, UIPickerViewDelegate, UIPickerViewData
         let toolBar = UIToolbar()
         toolBar.barStyle = .default
         toolBar.isTranslucent = true
-        toolBar.tintColor = UIColor.blue
+        var color = UIColor.blue
+        if let tintColor = self.tintColor {
+            color = tintColor
+        }
+        toolBar.tintColor = color
         toolBar.sizeToFit()
         
-        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(dismiss))
+        var rightText = "Done"
+        if let txt = self.rightButtonText {
+            rightText = txt
+        }
+        let doneButton = UIBarButtonItem(title: rightText, style: .plain, target: self, action: #selector(dismiss))
         let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         toolBar.setItems([spaceButton, doneButton], animated: false)
         toolBar.isUserInteractionEnabled = true

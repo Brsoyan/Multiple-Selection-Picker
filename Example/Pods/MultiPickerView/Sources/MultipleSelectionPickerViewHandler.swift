@@ -61,11 +61,27 @@ public class MultipleSelectionPickerViewHandler: PickerViewHandler, MultipleSele
         let toolBar = UIToolbar()
         toolBar.barStyle = .default
         toolBar.isTranslucent = true
-        toolBar.tintColor = UIColor.blue
+        
+        var color = UIColor.blue
+        if let tintColor = self.tintColor {
+            color = tintColor
+        }
+        
+        toolBar.tintColor = color
         toolBar.sizeToFit()
         
-        let closeButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(dismiss))
-        let doneButton = UIBarButtonItem(title: "Select", style: .plain, target: self, action: #selector(select))
+        var leftText = "Select"
+        if let txt = self.leftButtonText {
+            leftText = txt
+        }
+        
+        var rightText = "Done"
+        if let txt = self.rightButtonText {
+            rightText = txt
+        }
+        
+        let closeButton = UIBarButtonItem(title: rightText, style: .plain, target: self, action: #selector(dismiss))
+        let doneButton = UIBarButtonItem(title: leftText, style: .plain, target: self, action: #selector(select))
         let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         toolBar.setItems([closeButton, spaceButton, doneButton], animated: false)
         toolBar.isUserInteractionEnabled = true

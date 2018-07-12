@@ -33,7 +33,13 @@ class ViewController: UIViewController {
     
     @IBAction func multiSelection(_ sender: UIButton) {
         multiSelectionPicker.delegate = self
-        multiSelectionPicker.configWith(parentVC: self, owner: sender, data: USState.shared, onSelectedTitle: onItemSelected)
+        multiSelectionPicker.configWith(parentVC: self,
+                                        owner: sender,
+                                        data: USState.shared,
+                                        leftButtonText: "Select",
+                                        rightButtonText: "Done",
+                                        tintColor: nil,
+                                        onSelectedTitle: onItemSelected)
     }
 }
 
