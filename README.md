@@ -34,10 +34,6 @@ There are 1 example app included in the repository:
 
 We welcome contributions of any kind including new features, bug fixes, and documentation improvements. Please first open an issue describing what you want to build if it is a major change so that we can discuss how to move forward. Otherwise, go ahead and open a pull request for minor changes such as typo fixes and one liners.
 
-## Migrating from Older Versions
-
-See `MIGRATING.md`
-
 ### Features
 PickerViewHandler,DatePickerViewHandler and MultipleSelectionPickerViewHandler easy to use.
 Create data let data = DataObj() 
